@@ -10,3 +10,8 @@ I am an economist with research interests in development economics and health ec
 - Health Economics
 - Applied Econometrics
 - Machine Learning for Social Sciences
+
+## Current Activities
+- Research projects in development and health economics
+- Teaching and academic support activities
+- Empirical analysis using R, Python, and STATA
