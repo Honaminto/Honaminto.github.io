@@ -26,7 +26,7 @@ repository               : "Honaminto/Honaminto.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "/images/profile.jpg"
+  avatar           : "/images//images/profile.jpg"
   name             : "Emile Djohi"
   pronouns         : # example: "she/her"  
   bio              : "Economist with research interests in development economics and health economics, using applied econometrics and data-driven methods."
