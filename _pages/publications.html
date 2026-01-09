@@ -1,36 +1,42 @@
----
-layout: archive
-title: "Publications"
-permalink: /publications/
-author_profile: true
----
+<section id="working-papers">
+  <h2>Working Papers</h2>
+  <p><em>Ongoing research projects and manuscripts under review.</em></p>
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+  <div class="paper">
+    <h3>
+      Climate Extremes and Economic Stressors as Predictors of Conflict in Central America:
+      Evidence from Monthly Data (2012–2024)
+    </h3>
 
-{% include base_path %}
+    <p>
+      <strong>Emile Honaminto Djohi</strong><br>
+      University of Pennsylvania
+    </p>
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+    <p>
+      <em>Working Paper, Draft — December 2025</em>
+    </p>
 
+    <p>
+      <strong>Abstract:</strong>
+      This paper examines how climate extremes influence protest and violence in Central America
+      through economic stress. Using newly assembled monthly data for six countries between 2012
+      and 2024, the study combines conflict event data (MLP and MLEED), climate indicators
+      (temperature, precipitation, drought), and inflation-based measures of economic pressure.
+      An ElasticNet framework identifies relevant lag structures, and a mediation design decomposes
+      direct and indirect effects. The results show that climate shocks consistently raise inflation,
+      while their direct effects on protest and violence largely disappear once economic channels
+      are accounted for. The findings highlight the central role of economic stress in shaping
+      short-term conflict dynamics in the region.
+    </p>
 
+    <p>
+      <strong>Keywords:</strong>
+      Climate extremes, conflict, economic stress, inflation, Central America, monthly data
+    </p>
 
+    <p>
+      <a href="files/Writting_Sample_Emile_Djohi.pdf" target="_blank">Download Working Paper (PDF)</a>
+    </p>
+  </div>
+</section>
