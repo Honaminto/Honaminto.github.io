@@ -38,18 +38,24 @@ author_profile: true
 
 <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: flex-start;">
   <figure style="margin: 0;">
-    <img src="{{ '/assets/assets/sport/photos/emile_Nassau_2025_1.jpeg' | relative_url }}"
-         width="320"
-         alt="Nassau 2025 medals and trophy">
+    <img
+      src="{{ '/assets/assets/sport/photos/emile_Nassau_2025_1.jpeg' | relative_url }}"
+      data-full="{{ '/assets/assets/sport/photos/emile_Nassau_2025_1.jpeg' | relative_url }}"
+      width="320"
+      class="zoom-thumb"
+      alt="Nassau 2025 medals and trophy">
     <figcaption style="font-size: 0.9em; margin-top: 6px;">
       Medal ceremony and awards — Nassau 2025.
     </figcaption>
   </figure>
 
   <figure style="margin: 0;">
-    <img src="{{ '/assets/assets/sport/photos/emile_Nassau_2025_2.jpeg' | relative_url }}"
-         width="320"
-         alt="Nassau 2025 group photo">
+    <img
+      src="{{ '/assets/assets/sport/photos/emile_Nassau_2025_2.jpeg' | relative_url }}"
+      data-full="{{ '/assets/assets/sport/photos/emile_Nassau_2025_2.jpeg' | relative_url }}"
+      width="320"
+      class="zoom-thumb"
+      alt="Nassau 2025 group photo">
     <figcaption style="font-size: 0.9em; margin-top: 6px;">
       Group photo with officials and participants — Nassau 2025.
     </figcaption>
@@ -65,18 +71,24 @@ author_profile: true
 
 <div style="display: flex; flex-wrap: wrap; gap: 15px; align-items: flex-start;">
   <figure style="margin: 0;">
-    <img src="{{ '/assets/assets/sport/photos/emile_Nassau_2025_3.jpeg' | relative_url }}"
-         width="320"
-         alt="Golden State Wushu performance">
+    <img
+      src="{{ '/assets/assets/sport/photos/emile_Nassau_2025_3.jpeg' | relative_url }}"
+      data-full="{{ '/assets/assets/sport/photos/emile_Nassau_2025_3.jpeg' | relative_url }}"
+      width="320"
+      class="zoom-thumb"
+      alt="Golden State Wushu performance">
     <figcaption style="font-size: 0.9em; margin-top: 6px;">
       Competition performance — San Jose, California.
     </figcaption>
   </figure>
 
   <figure style="margin: 0;">
-    <img src="{{ '/assets/assets/sport/photos/emile_Nassau_2025_4.jpeg' | relative_url }}"
-         width="320"
-         alt="Golden State Wushu podium">
+    <img
+      src="{{ '/assets/assets/sport/photos/emile_Nassau_2025_4.jpeg' | relative_url }}"
+      data-full="{{ '/assets/assets/sport/photos/emile_Nassau_2025_4.jpeg' | relative_url }}"
+      width="320"
+      class="zoom-thumb"
+      alt="Golden State Wushu podium">
     <figcaption style="font-size: 0.9em; margin-top: 6px;">
       Podium and trophies — Golden State International Championships.
     </figcaption>
@@ -90,3 +102,87 @@ author_profile: true
 <ul>
   <li><em>Competition videos will be added as they become available.</em></li>
 </ul>
+
+<!-- =========================
+     LIGHTBOX (click-to-zoom)
+     Paste once on this page
+     ========================= -->
+
+<style>
+  .zoom-thumb { cursor: zoom-in; }
+
+  .lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    z-index: 9999;
+  }
+  .lightbox-overlay.open { display: flex; }
+
+  .lightbox-img {
+    max-width: min(1100px, 95vw);
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+  }
+
+  .lightbox-close {
+    position: absolute;
+    top: 14px;
+    right: 18px;
+    font-size: 28px;
+    color: #fff;
+    background: transparent;
+    border: 0;
+    cursor: pointer;
+    line-height: 1;
+  }
+</style>
+
+<div id="lightbox" class="lightbox-overlay" aria-hidden="true">
+  <button class="lightbox-close" aria-label="Close">&times;</button>
+  <img id="lightboxImg" class="lightbox-img" alt="">
+</div>
+
+<script>
+  (function () {
+    const overlay = document.getElementById("lightbox");
+    const overlayImg = document.getElementById("lightboxImg");
+    const closeBtn = overlay.querySelector(".lightbox-close");
+
+    function openLightbox(src, alt) {
+      overlayImg.src = src;
+      overlayImg.alt = alt || "";
+      overlay.classList.add("open");
+      overlay.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeLightbox() {
+      overlay.classList.remove("open");
+      overlay.setAttribute("aria-hidden", "true");
+      overlayImg.src = "";
+      document.body.style.overflow = "";
+    }
+
+    document.querySelectorAll("img[data-full]").forEach(img => {
+      img.addEventListener("click", () => openLightbox(img.dataset.full, img.alt));
+    });
+
+    closeBtn.addEventListener("click", closeLightbox);
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay) closeLightbox();
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && overlay.classList.contains("open")) closeLightbox();
+    });
+  })();
+</script>
