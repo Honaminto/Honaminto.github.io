@@ -23,8 +23,26 @@
   </div>
 </nav>
 
-<!-- HERO -->
-<div class="page-hero athletics-intro">
+<!-- ── IMAGE REGISTRY ─────────────────────────────────────────────
+     Add your image filenames here. The gallery will load them all.
+     Example: "images/wushu/photo1.jpg", "images/wushu/photo2.jpg"
+──────────────────────────────────────────────────────────────── -->
+<script>
+const GALLERIES = {
+  wushu: [
+    // "images/wushu/your-photo.jpg",
+  ],
+  sanda: [
+    // "images/sanda/your-photo.jpg",
+  ],
+  ballroom: [
+    // "images/ballroom/your-photo.jpg",
+  ]
+};
+</script>
+
+<!-- PAGE HERO -->
+<div class="page-hero">
   <div class="page-hero-inner">
     <div class="section-label">Beyond the Desk</div>
     <h1>Athletic <em>Pursuits</em></h1>
@@ -32,75 +50,147 @@
   </div>
 </div>
 
-<!-- WUSHU -->
-<div class="sport-section" id="wushu">
-  <div class="sport-inner">
-    <div class="sport-photo">
-      <!-- Upload your wushu photo to images/wushu/ and update src below -->
-      <img src="images/wushu/wushu.jpg" alt="Emile Djohi — Wushu"
-           onerror="this.parentElement.innerHTML='<div class=\'sport-photo-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><circle cx=\'12\' cy=\'5\' r=\'3\'/><path d=\'M12 8v4l3 3M6 20l2-6 4 2 4-2 2 6\'/></svg><span>Wushu Photo</span></div><div class=\'sport-badge\'>Wushu</div>'"/>
-      <div class="sport-badge">Wushu</div>
-    </div>
-    <div class="sport-text fade-up">
-      <div class="sport-num">01</div>
-      <h2>Wu<em>shu</em></h2>
-      <div class="sport-subtitle">Chinese Martial Arts · Forms &amp; Sparring</div>
-      <p>Wushu is a Chinese martial art that combines fluid athleticism with explosive power. It demands extraordinary body control, spatial awareness, and the ability to execute complex sequences with speed and precision — qualities that translate directly into disciplined intellectual work.</p>
-      <p>My practice spans both <strong>taolu</strong> (forms competition) and <strong>sanda</strong> (sparring), developing both the aesthetic and combative dimensions of the art.</p>
-    </div>
-  </div>
-</div>
+<!-- ── WUSHU ── -->
+<section class="sport-block" id="wushu">
+  <div class="section-inner">
+    <div class="sport-block-inner">
 
-<!-- SANDA / MMA -->
-<div class="sport-section" id="sanda" style="background: var(--navy);">
-  <div class="sport-inner reverse" style="max-width:1200px; margin:0 auto; display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center;">
-    <div class="sport-text fade-up" style="direction:ltr;">
-      <div class="sport-num" style="color:rgba(200,151,58,0.15);">02</div>
-      <h2 style="color:var(--white);">San<em>da</em> &amp; MMA</h2>
-      <div class="sport-subtitle">Full-Contact Combat Sports</div>
-      <p style="color:rgba(255,255,255,0.7);">Sanda (散打) is the full-contact Chinese combat sport combining striking, takedowns, and throws. Paired with Mixed Martial Arts training, it builds mental toughness, strategic thinking under pressure, and the capacity to adapt in real time.</p>
-      <p style="color:rgba(255,255,255,0.7);">Competing in full-contact sports demands the same analytical mindset as empirical research: reading patterns, testing strategies, and iterating under uncertainty.</p>
-    </div>
-    <div class="sport-photo" style="direction:ltr;">
-      <!-- Upload your Sanda/MMA photo to images/sanda/ and update src below -->
-      <img src="images/sanda/sanda.jpg" alt="Emile Djohi — Sanda / MMA"
-           onerror="this.parentElement.innerHTML='<div class=\'sport-photo-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><circle cx=\'12\' cy=\'5\' r=\'3\'/><path d=\'M8 12h8M12 8v8\'/></svg><span>Sanda / MMA Photo</span></div><div class=\'sport-badge\'>Sanda · MMA</div>'"/>
-      <div class="sport-badge">Sanda · MMA</div>
-    </div>
-  </div>
-</div>
+      <div class="sport-hero-photo">
+        <div class="sport-frame">
+          <img src="images/wushu/wushu.jpg" alt="Wushu"
+               onerror="this.src=''; this.parentElement.classList.add('no-img')"/>
+          <div class="sport-frame-label">Wushu</div>
+          <div class="sport-frame-num">01</div>
+        </div>
+        <button class="gallery-btn" data-sport="wushu">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          View Gallery
+        </button>
+      </div>
 
-<!-- BALLROOM -->
-<div class="sport-section" id="ballroom">
-  <div class="sport-inner">
-    <div class="sport-photo">
-      <!-- Upload your Ballroom photo to images/ballroom/ and update src below -->
-      <img src="images/ballroom/ballroom.jpg" alt="Emile Djohi — Ballroom Dance"
-           onerror="this.parentElement.innerHTML='<div class=\'sport-photo-placeholder\'><svg viewBox=\'0 0 24 24\' fill=\'none\' stroke=\'currentColor\' stroke-width=\'1\'><circle cx=\'12\' cy=\'5\' r=\'3\'/><path d=\'M12 8c0 4-4 8-4 8h8s-4-4-4-8z\'/></svg><span>Ballroom Photo</span></div><div class=\'sport-badge\'>Ballroom</div>'"/>
-      <div class="sport-badge">Ballroom</div>
-    </div>
-    <div class="sport-text fade-up">
-      <div class="sport-num">03</div>
-      <h2>Ball<em>room</em></h2>
-      <div class="sport-subtitle">Competitive Ballroom Dance</div>
-      <p>Ballroom dance is where athleticism meets artistry. From the precise footwork of Waltz to the rhythmic intensity of Latin styles, competitive ballroom demands physical conditioning, musical sensitivity, and the kind of coordinated partnership that mirrors collaborative research.</p>
-      <p>The discipline of performance — preparing, adapting, and executing under scrutiny — is a practice that sharpens focus and builds composure in every arena of life.</p>
+      <div class="sport-info fade-up">
+        <div class="sport-index">01</div>
+        <h2 class="sport-title">Wu<em>shu</em></h2>
+        <p class="sport-subtitle">Chinese Martial Arts · Forms &amp; Sparring</p>
+        <p class="sport-desc">Wushu is a Chinese martial art that combines fluid athleticism with explosive power. It demands extraordinary body control, spatial awareness, and the ability to execute complex sequences with speed and precision — qualities that translate directly into disciplined intellectual work.</p>
+        <p class="sport-desc">My practice spans both <strong>taolu</strong> (forms competition) and <strong>sanda</strong> (sparring), developing both the aesthetic and combative dimensions of the art.</p>
+      </div>
+
     </div>
   </div>
-</div>
+</section>
+
+<!-- ── SANDA / MMA ── -->
+<section class="sport-block sport-block--dark" id="sanda">
+  <div class="section-inner">
+    <div class="sport-block-inner sport-block-inner--reverse">
+
+      <div class="sport-info fade-up">
+        <div class="sport-index" style="color:rgba(200,151,58,0.15)">02</div>
+        <h2 class="sport-title" style="color:var(--white)">San<em>da</em> &amp; MMA</h2>
+        <p class="sport-subtitle">Full-Contact Combat Sports</p>
+        <p class="sport-desc" style="color:rgba(255,255,255,0.7)">Sanda (散打) is the full-contact Chinese combat sport combining striking, takedowns, and throws. Paired with Mixed Martial Arts training, it builds mental toughness, strategic thinking under pressure, and the capacity to adapt in real time.</p>
+        <p class="sport-desc" style="color:rgba(255,255,255,0.7)">Competing in full-contact sports demands the same analytical mindset as empirical research: reading patterns, testing strategies, and iterating under uncertainty.</p>
+      </div>
+
+      <div class="sport-hero-photo">
+        <div class="sport-frame sport-frame--accent">
+          <img src="images/sanda/sanda.jpg" alt="Sanda / MMA"
+               onerror="this.src=''; this.parentElement.classList.add('no-img')"/>
+          <div class="sport-frame-label">Sanda · MMA</div>
+          <div class="sport-frame-num">02</div>
+        </div>
+        <button class="gallery-btn" data-sport="sanda">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          View Gallery
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── BALLROOM ── -->
+<section class="sport-block" id="ballroom">
+  <div class="section-inner">
+    <div class="sport-block-inner">
+
+      <div class="sport-hero-photo">
+        <div class="sport-frame sport-frame--tall">
+          <img src="images/ballroom/ballroom.jpg" alt="Ballroom Dance"
+               onerror="this.src=''; this.parentElement.classList.add('no-img')"/>
+          <div class="sport-frame-label">Ballroom</div>
+          <div class="sport-frame-num">03</div>
+        </div>
+        <button class="gallery-btn" data-sport="ballroom">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          View Gallery
+        </button>
+      </div>
+
+      <div class="sport-info fade-up">
+        <div class="sport-index">03</div>
+        <h2 class="sport-title">Ball<em>room</em></h2>
+        <p class="sport-subtitle">Competitive Ballroom Dance</p>
+        <p class="sport-desc">Ballroom dance is where athleticism meets artistry. From the precise footwork of Waltz to the rhythmic intensity of Latin styles, competitive ballroom demands physical conditioning, musical sensitivity, and the kind of coordinated partnership that mirrors collaborative research.</p>
+        <p class="sport-desc">The discipline of performance — preparing, adapting, and executing under scrutiny — sharpens focus and builds composure in every arena of life.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
 
 <!-- PHILOSOPHY -->
 <section style="background:var(--navy-mid); padding:70px 2rem; text-align:center;">
   <div class="section-inner" style="max-width:700px;">
-    <div class="section-label" style="justify-content:center; color:var(--gold);">Philosophy</div>
+    <div class="section-label" style="justify-content:center;">Philosophy</div>
     <h2 class="section-title" style="color:var(--white); text-align:center;">"Train the <em>mind</em><br>through the body."</h2>
     <p style="color:rgba(255,255,255,0.6); font-size:1rem; line-height:1.9; margin-top:1.5rem;">
-      Whether deconstructing a climate-conflict pathway or executing a Wushu form, the same principles apply: precision, consistency, and the willingness to iterate. Athletic training is not a counterweight to intellectual work — it is its complement.
+      Whether deconstructing a climate-conflict pathway or executing a Wushu form, the same principles apply: precision, consistency, and the willingness to iterate.
     </p>
   </div>
 </section>
 
+<!-- ── LIGHTBOX ── -->
+<div class="lb-overlay" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery">
+  <button class="lb-close" id="lb-close" aria-label="Close gallery">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+    </svg>
+  </button>
+
+  <div class="lb-stage">
+    <button class="lb-arrow lb-prev" id="lb-prev" aria-label="Previous photo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="15 18 9 12 15 6"/>
+      </svg>
+    </button>
+    <div class="lb-img-wrap">
+      <img class="lb-img" id="lb-img" src="" alt=""/>
+      <div class="lb-counter" id="lb-counter"></div>
+    </div>
+    <button class="lb-arrow lb-next" id="lb-next" aria-label="Next photo">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="9 18 15 12 9 6"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="lb-thumbs" id="lb-thumbs"></div>
+  <div class="lb-sport-label" id="lb-sport-label"></div>
+</div>
+
 <footer>© 2026 Emile Honaminto Virgile Djohi · University of Pennsylvania</footer>
 <script src="js/main.js"></script>
+<script src="js/athletics.js"></script>
 </body>
 </html>
