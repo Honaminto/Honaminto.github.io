@@ -1,9 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url><loc>https://honaminto.github.io/</loc></url>
-<url><loc>https://honaminto.github.io/research.html</loc></url>
-<url><loc>https://honaminto.github.io/talks.html</loc></url>
-<url><loc>https://honaminto.github.io/teaching.html</loc></url>
-<url><loc>https://honaminto.github.io/athletics.html</loc></url>
-<url><loc>https://honaminto.github.io/cv.html</loc></url>
+
+  <url>
+    <loc>https://honaminto.github.io/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://honaminto.github.io/research.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://honaminto.github.io/talks.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://honaminto.github.io/teaching.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://honaminto.github.io/athletics.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://honaminto.github.io/cv.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
 </urlset>
